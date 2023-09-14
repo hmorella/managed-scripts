@@ -1,0 +1,33 @@
+file: script.sh
+name: connection-check
+description: Checks if a port is open
+author: hmorella
+allowedGroups: 
+  - SREP
+  - CEE
+  - LPSRE
+rbac:
+    roles:
+      - namespace: "openshift-network-diagnostics"
+        rules:
+          - verbs:
+            - "get"
+            - "list"
+            apiGroups:
+            - ""
+            resources:
+            - "pods"
+          - verbs:
+            - "create"
+            apiGroups:
+            - ""
+            resources:
+            - "pods/exec"
+envs:
+  - key: "DESTINATION"
+    description: "Parameters to be passed to the script. You can set the variable to '--help' to get list of supported parameters"
+    optional: false
+  - key: "PORT"
+    description: "Parameters to be passed to the script. You can set the variable to '--help' to get list of supported parameters"
+    optional: false
+language: bash
