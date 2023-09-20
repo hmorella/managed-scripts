@@ -35,7 +35,7 @@ The port 800 is CLOSE in 127.0.0.1 from node ip-10-0-169-251.eu-west-1.compute.i
 
 ### Usage with managed-scripts
 
-For usage with managed-scripts, the options need to be passed through the `DESTINATION` and `PORT` environment variable. Here are some examples: 
+For usage with managed-scripts, the options need to be passed through the `DESTINATION`, `PORT` and `NODE` environment variables. Here are some examples: 
 
 ```bash
 ocm backplane managedjob create CEE/connection-check  -p DESTINATION="google.com" -p PORT="4433"
