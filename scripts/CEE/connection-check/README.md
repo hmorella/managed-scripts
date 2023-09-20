@@ -38,11 +38,11 @@ The port 800 is CLOSE in 127.0.0.1 from node ip-10-0-169-251.eu-west-1.compute.i
 For usage with managed-scripts, the options need to be passed through the `DESTINATION`, `PORT` and `NODE` environment variables. Here are some examples: 
 
 ```bash
-ocm backplane managedjob create CEE/connection-check  -p DESTINATION="google.com" -p PORT="4433"
+ocm backplane managedjob create CEE/connection-check  -p DESTINATION="google.com" -p PORT="4433" -p NODE=ip-10-0-169-251.eu-west-1.compute.internal
 
-ocm backplane managedjob create CEE/connection-check  -p DESTINATION="google.com" -p PORT="443"
+ocm backplane managedjob create CEE/connection-check  -p DESTINATION="google.com" -p PORT="443" -p NODE=ip-10-0-169-251.eu-west-1.compute.internal
 
-ocm backplane managedjob create CEE/connection-check  -p DESTINATION="network-check-target.openshift-network-diagnostics" -p PORT="80"
+ocm backplane managedjob create CEE/connection-check  -p DESTINATION="network-check-target.openshift-network-diagnostics" -p PORT="80" -p NODE=ip-10-0-169-251.eu-west-1.compute.internal
 
 ocm backplane managedjob create CEE/connection-check  -p DESTINATION="127.0.0.1" -p PORT="800" -p NODE=ip-10-0-169-251.eu-west-1.compute.internal
 ```
