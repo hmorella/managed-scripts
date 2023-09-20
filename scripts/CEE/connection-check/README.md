@@ -16,19 +16,19 @@ ocm backplane managedjob logs `<jobname>`
 Here are some examples:
   
 ```
-$ ocm backplane testjob logs openshift-job-dev-g6wxh
+$ ocm backplane managedjob logs openshift-job-dev-g6wxh
 The port 80 is OPEN in network-check-target.openshift-network-diagnostics from node ip-10-0-169-251.eu-west-1.compute.internal
 ```
 
 ```
-$ ocm backplane testjob logs openshift-job-dev-pktv5
+$ ocm backplane managedjob logs openshift-job-dev-pktv5
 command terminated with exit code 124
 TIMEOUT
 The port 800 is CLOSE in network-check-target.openshift-network-diagnostics from node ip-10-0-169-251.eu-west-1.compute.internal
 ```
 
 ```
-$ ocm backplane testjob logs openshift-job-dev-2rhdb
+$ ocm backplane managedjob logs openshift-job-dev-2rhdb
 The port 800 is CLOSE in 127.0.0.1 from node ip-10-0-169-251.eu-west-1.compute.internal
 
 ```
