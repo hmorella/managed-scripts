@@ -5,10 +5,10 @@
 Provide the functionality to test if a destination (FQDN or IP) has the port open or close from the platform perspective.
 
 ## Create the job to run the health check
-ocm backplane managedjob create CEE/connection-check -p DESTINATION="<destination>" -p PORT="<port>"
+ocm backplane managedjob create CEE/connection-check -p DESTINATION="`destination`" -p PORT="`port`"
 
 ## Getting the result of the job in a file
-ocm backplane managedjob logs <jobname>
+ocm backplane managedjob logs `jobname`
   
 ```
 $ ocm backplane managedjob logs openshift-job-dev-frbj4
